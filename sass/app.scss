@@ -1,11 +1,4 @@
-@import "./abstracts/variables";
-@import "./abstracts/minxins";
+@use "./base/reset";
+@use "./base/typography";
+@use "./layout";
 
-@import "./base/reset";
-@import "./base/general";
-@import "./base/typography";
-
-@import "./layout/header";
-@import "./layout/sidebar";
-
-@import "./pages/home";

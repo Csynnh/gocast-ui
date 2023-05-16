@@ -39,8 +39,94 @@ body {
   line-height: 1;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --primary-h: 248;
+  --primary-s: 57%;
+  --primary-l: 60%;
+}
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
+  color: hsl(220, 10%, 12%);
+  font-weight: 400;
+}
+
+.sidebar {
+  background-color: hsl(0, 100%, 100%);
+  padding: 48px 30px;
+  border-right: 1px solid hsl(208, 26%, 95%);
+}
+
+.logo {
+  display: block;
+  margin-bottom: 44px;
+}
+
+.menu {
+  display: flex;
+  gap: 6px;
+  --gap: 26px;
+  flex-direction: column;
+}
+.menu:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: hsl(213, 33%, 94%);
+  margin-block: var(--gap);
+}
+.menu-heading {
+  font-size: 13px;
+  line-height: 1.46;
+  color: hsl(215, 19%, 59%);
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.menu-icon {
+  flex: 0 0 24px;
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: hsl(220, 10%, 12%);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  border-radius: 12px;
+  width: 196px;
+  height: 40px;
+  padding: 8px 30px 8px 20px;
+}
+.menu-link:hover {
+  background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+  color: white;
+}
+.menu-link:hover [fill^="#E5"] {
+  fill: #fff;
+  opacity: 1;
+}
+.menu-link:hover [fill^="#A5"] {
+  mix-blend-mode: normal;
+  fill: hsl(var(--primary-h), calc(var(--primary-s) + 1%), calc(var(--primary-l) + 16%));
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: hsl(0, 100%, 100%);
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=app.css.map */
