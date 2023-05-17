@@ -3,5 +3,25 @@ mixin menuItem(text, icon = '', href = "#")
         a.menu-link(href= href)
             span.menu-icon
                 if icon
-                    | !{icon}
+                    case icon
+                        when 'icon-home'
+                            include ../icons/icon-home
+                        when 'icon-dashboard'
+                            include ../icons/icon-dashboard
+                        when 'icon-expl'
+                            include ../icons/icon-expl
+                        when 'icon-leaderboard'
+                            include ../icons/icon-leaderboard
+                        when 'icon-mic'
+                            include ../icons/icon-mic
+                        when 'icon-playlist'
+                            include ../icons/icon-playlist
+                        when 'icon-sub_er'
+                            include ../icons/icon-sub_er
+                        when 'icon-sub'
+                            include ../icons/icon-sub
+                        when 'icon-team'
+                            include ../icons/icon-team
+                        when 'icon-trending'
+                            include ../icons/icon-trending
             span.menu-text= text 
