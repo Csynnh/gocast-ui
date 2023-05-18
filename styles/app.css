@@ -198,4 +198,9 @@ body {
   min-height: 100vh;
 }
 
+.main-container {
+  padding: 30px 60px 30px 56px;
+  padding: 10px 24px;
+}
+
 /*# sourceMappingURL=app.css.map */

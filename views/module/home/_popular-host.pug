@@ -1,0 +1,8 @@
+.host 
+    h2.host-heading Popular Hosts
+    ul.host-list 
+        each user in [{name: "Thomas", bgc: "hsla(14, 100%, 82%, 1)"}, {name: "Darrell", bgc:" hsla(39, 100%, 75%, 1)"}, {name: "Arlene", bgc:"hsla(248, 57%, 80%, 1)"}, {name: "Kristin", bgc:"hsla(341, 100%, 84%, 1)"}, {name: "Courtney", bgc:"hsla(39, 100%, 84%, 1)"}, {name: "Cody", bgc:"hsla(341, 100%, 84%, 1)"}, {name: "Arlene", bgc:"hsla(248, 57%, 80%, 1)"}  ] 
+            li.host-item 
+                .host-avatar(style=`background-color: ${user.bgc}` ) 
+                    img(srcSet="./images/img-host-user.png 2x", alt="avatar")
+                span.host-name= user.name

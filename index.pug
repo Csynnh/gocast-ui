@@ -4,4 +4,7 @@ block title
 append stylesheet 
     link(rel="stylesheet", href="./styles/home.css")
 block main  
-    p Home page
+    .home-wrapper
+        .home-left
+            include ./views/module/home/_popular-host
+        .home-right 

@@ -1,3 +1,75 @@
+:root {
+  --primary-h: 248;
+  --primary-s: 57%;
+  --primary-l: 60%;
+}
 
+.host {
+  padding-bottom: 28px;
+}
+.host-heading {
+  color: hsl(220, 10%, 12%);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.host-list {
+  --gap-item: 12px;
+  display: flex;
+  gap: var(--gap-item);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.host-item {
+  --gap: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+.host-avatar {
+  --avatar-size: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 100rem;
+  background-color: #ffbaa5;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #ffabc6;
+}
+.host-name {
+  font-size: 14px;
+  line-height: 1.43;
+  color: hsl(216, 3%, 38%);
+}
+@media screen and (min-width: 768px) {
+  .host-heading {
+    margin-bottom: 20px;
+  }
+  .host-list {
+    --gap-item: 31px;
+  }
+  .host-item {
+    --gap: 7px;
+  }
+  .host-avatar {
+    --avatar-size: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    padding: 30px 60px 30px 56px;
+  }
+}
+.home-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
 
 /*# sourceMappingURL=home.css.map */
