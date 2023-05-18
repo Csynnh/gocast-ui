@@ -1,10 +1,10 @@
-include ../mixins/mixin
+include ../mixins/_mixins
 aside.sidebar 
     a.logo(href="/")
         img(srcSet=" ./images/Logo.png 2x", alt="GoCashUI") 
     ul.menu 
-        each item in [{text: "Home",  icon: "icon-home"},{text: "Trending",  icon:"icon-trending"},{text: "Explore Topics",  icon: "icon-expl"},{text: "Playlist",  icon: "icon-playlist"},{text: "Subscriptions",  icon: "icon-sub"}]
-            +menuItem(item.text, item.icon)
+        each item in [{text: "Home",  icon: "icon-home", href: "/"},{text: "Trending",  icon:"icon-trending", href: "/trending.html"},{text: "Explore Topics",  icon: "icon-expl"},{text: "Playlist",  icon: "icon-playlist"},{text: "Subscriptions",  icon: "icon-sub"}]
+            +menuItem(item.text, item.icon, item.href)
     ul.menu 
         h3.menu-heading Podcasters 
         each item in [{text: "Dashboard",  icon: 'icon-dashboard'},{text: "Episodes",  icon: 'icon-mic'},{text: "Team",  icon: 'icon-team'},{text: "Subscribers",  icon: 'icon-sub_er'}]
