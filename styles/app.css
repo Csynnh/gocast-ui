@@ -62,6 +62,14 @@ body {
   line-height: 1.47;
 }
 
+.heading {
+  color: hsl(220, 10%, 12%);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
 .button {
   --gap: 10px;
   --padding: 8px 14px;

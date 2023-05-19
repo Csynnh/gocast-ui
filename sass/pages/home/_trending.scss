@@ -1,0 +1,50 @@
+@use "../../abstracts" as abst;
+.trending {
+  &-wrapper {
+    background-color: abst.$gray-natural1;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    max-width: 676px;
+  }
+  &-content {
+    max-width: 310px;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.45;
+    color: abst.$text-black1;
+    margin-bottom: 11px;
+    span {
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: linear-gradient(
+        92.29deg,
+        #415ef4 0.33%,
+        #7141ef 28.14%
+      );
+    }
+  }
+  &-caption {
+    font-size: 14px;
+    line-height: 1.43;
+    color: abst.$gray-natural;
+    margin-bottom: 4px;
+  }
+  &-author {
+    color: abst.$primary-black;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 20px;
+    span {
+      color: abst.$gray-natural;
+    }
+  }
+  &-man {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+  }
+}
