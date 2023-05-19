@@ -62,6 +62,23 @@ body {
   line-height: 1.47;
 }
 
+.button {
+  --gap: 10px;
+  --padding: 8px 14px;
+  --fw: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  padding: var(--padding);
+  font-weight: var(--fw);
+  border-radius: 8px;
+}
+.button--primary {
+  background-color: hsl(248, 57%, 60%);
+  color: hsl(0, 0%, 99%);
+}
+
 .sidebar {
   background-color: hsl(0, 100%, 100%);
   padding: 48px 30px;
@@ -137,17 +154,11 @@ body {
 .topbar-right > * {
   flex-shrink: 0;
 }
-.topbar-right .button-upload {
+
+.button-upload {
   height: 48px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 12px 16px;
-  border-radius: 8px;
-}
-.topbar-right .button-upload span {
-  font-weight: 600;
-  color: hsl(0, 0%, 99%);
+  --gap: 6px;
+  --padding: 12px 16px;
 }
 
 .profile {
@@ -183,10 +194,6 @@ body {
 }
 .search-input::-moz-input-placeholder {
   color: hsl(235, 7%, 67%);
-}
-
-.button-upload {
-  background-color: hsl(248, 57%, 60%);
 }
 
 .wrapper {

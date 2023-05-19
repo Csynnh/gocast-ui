@@ -12,19 +12,12 @@
     & > * {
       flex-shrink: 0;
     }
-    .button-upload {
-      height: 48px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 12px 16px;
-      border-radius: 8px;
-      span {
-        font-weight: 600;
-        color: abst.$gray-neutral1;
-      }
-    }
   }
+}
+.button-upload {
+  height: 48px;
+  --gap: 6px;
+  --padding: 12px 16px;
 }
 .profile {
   display: block;
@@ -53,8 +46,4 @@
     caret-color: abst.$primary-color;
     @include abst.placeholder(abst.$text-gray2);
   }
-}
-
-.button-upload {
-  background-color: abst.$primary-color;
 }
