@@ -25,3 +25,9 @@ mixin menuItem(text, icon = '', href = "#")
                         when 'icon-trending'
                             include ../icons/_icon-trending
             span.menu-text= text 
+
+mixin toggle
+    label.toggle     
+                input(type="checkbox").toggle-input
+                .toggle-main
+                    .toggle-spinner

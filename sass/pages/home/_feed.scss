@@ -1,0 +1,50 @@
+@use "../../abstracts" as abst;
+.feed {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    container-type: inline-size;
+    container-name: feed-heading;
+  }
+  &-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 500;
+    color: abst.$text-gray1;
+    padding: 10px;
+    &-item {
+      padding: 10px;
+      border-bottom: 1px solid abst.$Bg3;
+      cursor: pointer;
+      &.active {
+        font-weight: 600;
+        color: abst.$primary-color;
+        border-bottom: 1px solid currentColor;
+      }
+    }
+  }
+  &-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    p {
+      font-weight: 500;
+      color: abst.$text-gray1;
+    }
+  }
+  @container feed-heading (max-width: 490px) {
+    &-toggle p {
+      display: none;
+    }
+  }
+  @container feed-heading (max-width: 539.5px) {
+    &-toggle p {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}

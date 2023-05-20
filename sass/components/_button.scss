@@ -9,6 +9,7 @@
   gap: var(--gap);
   padding: var(--padding);
   font-weight: var(--fw);
+  font-size: 15px;
   border-radius: 8px;
   &--primary {
     background-color: abst.$primary-color;

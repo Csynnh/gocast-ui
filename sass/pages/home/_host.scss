@@ -3,7 +3,6 @@
   padding-bottom: 28px;
   &-heading {
     color: abst.$text-black1;
-    font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 12px;
@@ -38,14 +37,9 @@
   }
 
   &-name {
-    font-size: 14px;
-    line-height: 1.43;
     color: abst.$text-gray1;
   }
   @media screen and (min-width: 768px) {
-    &-heading {
-      // margin-bottom: 20px;
-    }
     &-list {
       --gap-item: 31px;
     }
@@ -55,10 +49,5 @@
     &-avatar {
       --avatar-size: 70px;
     }
-  }
-}
-@media screen and (min-width: 768px) {
-  .main-container {
-    padding: 30px 60px 30px 56px;
   }
 }

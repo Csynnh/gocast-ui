@@ -1,17 +1,31 @@
 @use "../../abstracts" as abst;
 .trending {
-  &-wrapper {
+  padding-top: 20px;
+  padding-bottom: 36px;
+
+  container-type: inline-size;
+  container-name: trending;
+  &-heading {
+    --mb: 11px;
+  }
+  &-banner {
     background-color: abst.$gray-natural1;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 22px 22px 20px;
     position: relative;
-    max-width: 676px;
+    display: flex;
+    align-items: flex-start;
+    @container trending (max-width: 630px) {
+      overflow: hidden;
+    }
   }
   &-content {
-    max-width: 310px;
+    flex: 0 0 310px;
+    @container trending (max-width: 630px) {
+      flex: 1;
+    }
   }
   &-title {
-    font-weight: 600;
     font-size: 22px;
     line-height: 1.45;
     color: abst.$text-black1;
@@ -27,24 +41,61 @@
       );
     }
   }
-  &-caption {
-    font-size: 14px;
-    line-height: 1.43;
+  &-padcast {
     color: abst.$gray-natural;
     margin-bottom: 4px;
   }
   &-author {
     color: abst.$primary-black;
-    font-size: 14px;
-    line-height: 1.43;
     margin-bottom: 20px;
     span {
       color: abst.$gray-natural;
     }
   }
-  &-man {
+
+  &-circle,
+  &-vector {
+    position: absolute;
+  }
+  &-vector {
+    top: 36px;
+    right: 74px;
+  }
+  &-circle {
+    left: 350px;
+    top: 121px;
+  }
+  &-image {
     position: absolute;
     bottom: 0;
     right: 15px;
+    max-width: 332px;
+    @container trending (max-width: 630px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-vector {
+      top: 69px;
+      right: 22px;
+    }
+    &-circle {
+      width: 109px;
+      height: 109px;
+      left: 203px;
+      top: 158px;
+    }
+    &-button {
+      --padding: 9px 14px;
+    }
+    &-author {
+      margin-bottom: 21px;
+    }
+    &-padcast {
+      margin-bottom: 6px;
+    }
+    &-title {
+      margin-bottom: 7px;
+    }
   }
 }

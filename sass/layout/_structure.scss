@@ -9,5 +9,12 @@
 }
 .main-container {
   padding: 30px 60px 30px 56px;
-  padding: 10px 24px;
+}
+@media screen and (max-width: 1279.98px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .main-container {
+    padding: 10px 24px;
+  }
 }

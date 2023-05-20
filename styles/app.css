@@ -58,16 +58,26 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   color: hsl(220, 10%, 12%);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 1.47;
+  font-size: 14px;
+  line-height: 1.43;
 }
 
 .heading {
+  --mb: 18px;
   color: hsl(220, 10%, 12%);
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 18px;
+  margin-bottom: var(--mb);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 .button {
@@ -80,6 +90,7 @@ body {
   gap: var(--gap);
   padding: var(--padding);
   font-weight: var(--fw);
+  font-size: 15px;
   border-radius: 8px;
 }
 .button--primary {
@@ -87,10 +98,40 @@ body {
   color: hsl(0, 0%, 99%);
 }
 
+.toggle-main {
+  width: 30px;
+  height: 17px;
+  border-radius: 100rem;
+  background-color: hsl(235, 7%, 67%);
+  padding: 1.5px 2px;
+  cursor: pointer;
+}
+.toggle-input {
+  display: none;
+}
+.toggle-input:checked + .toggle-main .toggle-spinner {
+  transform: translateX(12px);
+}
+.toggle-input:checked + .toggle-main {
+  background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+}
+.toggle-spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 100rem;
+  background-color: #f8f8f8;
+  transition: all linear 0.2s;
+}
+
 .sidebar {
   background-color: hsl(0, 100%, 100%);
   padding: 48px 30px;
   border-right: 1px solid hsl(208, 26%, 95%);
+}
+@media screen and (max-width: 1279.98px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 .logo {
@@ -215,7 +256,15 @@ body {
 
 .main-container {
   padding: 30px 60px 30px 56px;
-  padding: 10px 24px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .main-container {
+    padding: 10px 24px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

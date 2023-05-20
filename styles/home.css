@@ -9,7 +9,6 @@
 }
 .host-heading {
   color: hsl(220, 10%, 12%);
-  font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 12px;
@@ -43,8 +42,6 @@
   box-shadow: 0 0 0 2px white, 0 0 0 3px #ffabc6;
 }
 .host-name {
-  font-size: 14px;
-  line-height: 1.43;
   color: hsl(216, 3%, 38%);
 }
 @media screen and (min-width: 768px) {
@@ -59,23 +56,37 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .main-container {
-    padding: 30px 60px 30px 56px;
-  }
+.trending {
+  padding-top: 20px;
+  padding-bottom: 36px;
+  container-type: inline-size;
+  container-name: trending;
 }
-.trending-wrapper {
+.trending-heading {
+  --mb: 11px;
+}
+.trending-banner {
   background-color: #f8f8f8;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 22px 22px 20px;
   position: relative;
-  max-width: 676px;
+  display: flex;
+  align-items: flex-start;
+}
+@container trending (max-width: 630px) {
+  .trending-banner {
+    overflow: hidden;
+  }
 }
 .trending-content {
-  max-width: 310px;
+  flex: 0 0 310px;
+}
+@container trending (max-width: 630px) {
+  .trending-content {
+    flex: 1;
+  }
 }
 .trending-title {
-  font-weight: 600;
   font-size: 22px;
   line-height: 1.45;
   color: hsl(220, 10%, 12%);
@@ -87,25 +98,110 @@
   -webkit-background-clip: text;
   background-image: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
 }
-.trending-caption {
-  font-size: 14px;
-  line-height: 1.43;
+.trending-padcast {
   color: #676a6f;
   margin-bottom: 4px;
 }
 .trending-author {
   color: #232333;
-  font-size: 14px;
-  line-height: 1.43;
   margin-bottom: 20px;
 }
 .trending-author span {
   color: #676a6f;
 }
-.trending-man {
+.trending-circle, .trending-vector {
+  position: absolute;
+}
+.trending-vector {
+  top: 36px;
+  right: 74px;
+}
+.trending-circle {
+  left: 350px;
+  top: 121px;
+}
+.trending-image {
   position: absolute;
   bottom: 0;
   right: 15px;
+  max-width: 332px;
+}
+@container trending (max-width: 630px) {
+  .trending-image {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .trending-vector {
+    top: 69px;
+    right: 22px;
+  }
+  .trending-circle {
+    width: 109px;
+    height: 109px;
+    left: 203px;
+    top: 158px;
+  }
+  .trending-button {
+    --padding: 9px 14px;
+  }
+  .trending-author {
+    margin-bottom: 21px;
+  }
+  .trending-padcast {
+    margin-bottom: 6px;
+  }
+  .trending-title {
+    margin-bottom: 7px;
+  }
+}
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  container-type: inline-size;
+  container-name: feed-heading;
+}
+.feed-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 500;
+  color: hsl(216, 3%, 38%);
+  padding: 10px;
+}
+.feed-tab-item {
+  padding: 10px;
+  border-bottom: 1px solid #373a43;
+  cursor: pointer;
+}
+.feed-tab-item.active {
+  font-weight: 600;
+  color: hsl(248, 57%, 60%);
+  border-bottom: 1px solid currentColor;
+}
+.feed-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.feed-toggle p {
+  font-weight: 500;
+  color: hsl(216, 3%, 38%);
+}
+@container feed-heading (max-width: 490px) {
+  .feed-toggle p {
+    display: none;
+  }
+}
+@container feed-heading (max-width: 539.5px) {
+  .feed-toggle p {
+    font-size: 12px;
+    font-weight: 600;
+  }
 }
 
 .home-wrapper {

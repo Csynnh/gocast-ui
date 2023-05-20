@@ -1,15 +1,17 @@
 .trending 
     h2.heading.trending-heading Trending
-    .trending-wrapper 
+    .trending-banner 
         .trending-content 
             h3.trending-title 
                 span UX Design 
                 |Process: Mental Modeling Framework.
-            .trending-caption Podcast Episode - 1
-            .trending-author Thomas L. Fletcher 
+            p.trending-padcast Podcast Episode - 1
+            p.trending-author Thomas L. Fletcher 
                 span.trending-author-position ( Product Designer at UIHUT )
             button.button.button--primary.trending-button 
-                img(srcSet="./images/Play.png 2x", alt="play-icon")
+                include ../../icons/_icon-play
                 span Play Now
-        .trending-man 
+        img.trending-circle(srcset="./images/img-circle.png 2x", alt="")
+        img.trending-vector(srcset="./images/img-vector.png 2x", alt="")
+        .trending-image 
             img(srcSet="./images/img-man.png 2x", alt="man-image")

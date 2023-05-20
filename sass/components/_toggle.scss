@@ -1,0 +1,28 @@
+@use "../abstracts" as abst;
+.toggle {
+  &-main {
+    width: 30px;
+    height: 17px;
+    border-radius: 100rem;
+    background-color: abst.$text-gray2;
+    padding: 1.5px 2px;
+    cursor: pointer;
+  }
+  &-input {
+    display: none;
+  }
+  &-input:checked + &-main &-spinner {
+    transform: translateX(12px);
+  }
+  &-input:checked + &-main {
+    background: abst.$gradient;
+  }
+
+  &-spinner {
+    width: 14px;
+    height: 14px;
+    border-radius: 100rem;
+    background-color: abst.$gray-natural1;
+    transition: all linear 0.2s;
+  }
+}
