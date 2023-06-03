@@ -1,22 +1,22 @@
 $font-primary: "IBM Plex Sans", sans-serif;
-$bg-color: hsl(0, 100%, 100%);
+$bg-color: #ffffff;
 $Bg3: #373a43;
-$primary-color: hsla(248, 57%, 60%, 1);
-$text-gray: hsl(215, 19%, 59%);
-$text-gray1: hsla(216, 3%, 38%, 1);
-$text-gray2: hsla(235, 7%, 67%, 1);
-$grayE9: hsla(213, 33%, 94%, 1);
+$primary-color: #6e5fd3;
+$text-gray: #8393aa;
+$text-gray1: #5e6064;
+$text-gray2: #a5a6b1;
+$grayE9: #ebeff5;
 $text-black1: hsl(220, 10%, 12%);
 $primary-black: #232333;
 
-$gray-neutral1: hsla(0, 0%, 99%, 1);
+$gray-neutral1: #fcfcfc;
 $gray-natural: #676a6f;
 $gray-natural1: #f8f8f8;
-$gray-natural2: hsla(208, 26%, 95%, 1);
+$gray-natural2: #f0f3f6;
 $gradient: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
 
 :root {
-  --primary-h: 248;
-  --primary-s: 57%;
-  --primary-l: 60%;
+   --primary-h: 248;
+   --primary-s: 57%;
+   --primary-l: 60%;
 }

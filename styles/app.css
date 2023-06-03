@@ -94,15 +94,15 @@ h6 {
   border-radius: 8px;
 }
 .button--primary {
-  background-color: hsl(248, 57%, 60%);
-  color: hsl(0, 0%, 99%);
+  background-color: #6e5fd3;
+  color: #fcfcfc;
 }
 
 .toggle-main {
   width: 30px;
   height: 17px;
   border-radius: 100rem;
-  background-color: hsl(235, 7%, 67%);
+  background-color: #a5a6b1;
   padding: 1.5px 2px;
   cursor: pointer;
 }
@@ -124,9 +124,9 @@ h6 {
 }
 
 .sidebar {
-  background-color: hsl(0, 100%, 100%);
+  background-color: #ffffff;
   padding: 48px 30px;
-  border-right: 1px solid hsl(208, 26%, 95%);
+  border-right: 1px solid #f0f3f6;
 }
 @media screen and (max-width: 1279.98px) {
   .sidebar {
@@ -149,13 +149,13 @@ h6 {
   content: "";
   display: block;
   height: 1px;
-  background-color: hsl(213, 33%, 94%);
+  background-color: #ebeff5;
   margin-block: var(--gap);
 }
 .menu-heading {
   font-size: 13px;
   line-height: 1.46;
-  color: hsl(215, 19%, 59%);
+  color: #8393aa;
   margin-bottom: 10px;
   padding-left: 20px;
 }
@@ -190,7 +190,7 @@ h6 {
 
 .topbar {
   padding: 24px 60px 24px 56px;
-  background-color: hsl(0, 100%, 100%);
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,27 +228,27 @@ h6 {
   align-items: center;
   flex: 0 1 360px;
   gap: 12px;
-  background-color: hsl(208, 26%, 95%);
+  background-color: #f0f3f6;
   border-radius: 12px;
 }
 .search-input {
   flex: 1;
   border: none;
-  color: hsl(248, 57%, 60%);
+  color: #6e5fd3;
   font-weight: 500;
-  caret-color: hsl(248, 57%, 60%);
+  caret-color: #6e5fd3;
 }
 .search-input::-webkit-input-placeholder {
-  color: hsl(235, 7%, 67%);
+  color: #a5a6b1;
 }
 .search-input::-moz-input-placeholder {
-  color: hsl(235, 7%, 67%);
+  color: #a5a6b1;
 }
 
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: hsl(0, 100%, 100%);
+  background-color: #ffffff;
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
   min-height: 100vh;

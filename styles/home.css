@@ -42,7 +42,7 @@
   box-shadow: 0 0 0 2px white, 0 0 0 3px #ffabc6;
 }
 .host-name {
-  color: hsl(216, 3%, 38%);
+  color: #5e6064;
 }
 @media screen and (min-width: 768px) {
   .host-list {
@@ -169,7 +169,7 @@
   align-items: center;
   white-space: nowrap;
   font-weight: 500;
-  color: hsl(216, 3%, 38%);
+  color: #5e6064;
   padding: 10px;
 }
 .feed-tab-item {
@@ -179,7 +179,7 @@
 }
 .feed-tab-item.active {
   font-weight: 600;
-  color: hsl(248, 57%, 60%);
+  color: #6e5fd3;
   border-bottom: 1px solid currentColor;
 }
 .feed-toggle {
@@ -190,7 +190,7 @@
 }
 .feed-toggle p {
   font-weight: 500;
-  color: hsl(216, 3%, 38%);
+  color: #5e6064;
 }
 @container feed-heading (max-width: 490px) {
   .feed-toggle p {
@@ -202,6 +202,61 @@
     font-size: 12px;
     font-weight: 600;
   }
+}
+.feed-item {
+  margin-top: 30px;
+  border: 1px solid #f0f3f6;
+  border-radius: 10px;
+}
+.feed-item-header {
+  padding: 20px 20px 12px;
+  position: relative;
+  border-bottom: 1px solid #f0f3f6;
+}
+.feed-item-header .feed-icon_more {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.feed-author {
+  display: flex;
+}
+.feed-author-avatar {
+  position: relative;
+  width: 48px;
+  height: 56px;
+  margin-right: 16px;
+}
+.feed-author-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 100rem;
+}
+.feed-author-icon_veryfi {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+}
+.feed-author-content {
+  font-weight: 500;
+}
+.feed-author-title {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+.feed-author-ratting {
+  color: #a6a7b2;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.feed-author-ratting img {
+  height: 12px;
+}
+.feed-date {
+  font-weight: 400;
+  color: #a5a6b1;
 }
 
 .home-wrapper {

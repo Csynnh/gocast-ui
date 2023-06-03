@@ -1,50 +1,106 @@
 @use "../../abstracts" as abst;
 .feed {
-  &-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    container-type: inline-size;
-    container-name: feed-heading;
-  }
-  &-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    font-weight: 500;
-    color: abst.$text-gray1;
-    padding: 10px;
-    &-item {
-      padding: 10px;
-      border-bottom: 1px solid abst.$Bg3;
-      cursor: pointer;
-      &.active {
-        font-weight: 600;
-        color: abst.$primary-color;
-        border-bottom: 1px solid currentColor;
-      }
-    }
-  }
-  &-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    p {
+   &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      container-type: inline-size;
+      container-name: feed-heading;
+   }
+   &-tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
       font-weight: 500;
       color: abst.$text-gray1;
-    }
-  }
-  @container feed-heading (max-width: 490px) {
-    &-toggle p {
-      display: none;
-    }
-  }
-  @container feed-heading (max-width: 539.5px) {
-    &-toggle p {
-      font-size: 12px;
-      font-weight: 600;
-    }
-  }
+      padding: 10px;
+      &-item {
+         padding: 10px;
+         border-bottom: 1px solid abst.$Bg3;
+         cursor: pointer;
+         &.active {
+            font-weight: 600;
+            color: abst.$primary-color;
+            border-bottom: 1px solid currentColor;
+         }
+      }
+   }
+   &-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      p {
+         font-weight: 500;
+         color: abst.$text-gray1;
+      }
+   }
+   @container feed-heading (max-width: 490px) {
+      &-toggle p {
+         display: none;
+      }
+   }
+   @container feed-heading (max-width: 539.5px) {
+      &-toggle p {
+         font-size: 12px;
+         font-weight: 600;
+      }
+   }
+   &-item {
+      margin-top: 30px;
+      border: 1px solid abst.$gray-natural2;
+      border-radius: 10px;
+      &-header {
+         padding: 20px 20px 12px;
+         position: relative;
+         border-bottom: 1px solid abst.$gray-natural2;
+         .feed-icon_more {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+         }
+      }
+   }
+   &-author {
+      display: flex;
+      &-avatar {
+         position: relative;
+         width: 48px;
+         height: 56px;
+         margin-right: 16px;
+      }
+      &-image {
+         width: 48px;
+         height: 48px;
+         border-radius: 100rem;
+      }
+      &-icon_veryfi {
+         position: absolute;
+         right: 0;
+         bottom: 2px;
+      }
+
+      &-content {
+         font-weight: 500;
+      }
+      &-title {
+         display: flex;
+         gap: 2px;
+         margin-bottom: 4px;
+      }
+      &-ratting {
+         color: #a6a7b2;
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         img {
+            height: 12px;
+         }
+      }
+   }
+   &-date {
+      font-weight: 400;
+      color: abst.$text-gray2;
+   }
 }
