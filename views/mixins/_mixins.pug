@@ -31,3 +31,54 @@ mixin toggle
 					input(type="checkbox").toggle-input
 					.toggle-main
 						.toggle-spinner
+
+mixin button(icon= false, title= "Play Now") 
+	button.button.button--primary.feed-button
+		if icon 
+			include ../icons/_icon-playlist
+		span= title
+
+
+mixin feedItem 
+	.feed-item 
+		.feed-item-header
+			.feed-author
+				.feed-author-avatar 	
+					img.feed-author-image(srcSet="./images/img-feed-avatar.png 2x", alt="feed-avatar")
+					span.feed-author-icon_veryfi 
+						include ../icons/_icon-veryfi
+
+				.feed-author-content
+					.feed-author-title
+						h4.feed-author-name James Killened
+						.feed-author-ratting
+							span rated an episude
+							img(srcSet="./images/img-feed-ratting.png 2x", alt="feed-ratting")
+					.feed-date Jun 25th
+			span.feed-icon_more
+				include ../icons/_icon-more
+		.feed-item-main
+			.feed-image 
+				img(srcSet="./images/img-feed-content.png 2x", alt="img-feed-content")
+				//- img(srcSet="./images/img-feed-content.png 2x", alt="img-feed-content")
+			.feed-content
+				.feed-content-podcast Perspective Podcast (Ep. 1)
+				h3.feed-content-heading Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+				.feed-content-time 
+					.feed-content-time-posting 	
+						include ../icons/_icon-clock
+						span 11 dayes ago
+					.feed-content-time-length 	
+						include ../icons/_icon-hourglass
+						span 45mins 10 Sec
+				.feed-content-desc Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			a(href="/").feed-icon_share 
+				include ../icons/_icon-share
+		.feed-item-footer
+			.feed-item-footer-interact 
+				include ../icons/_icon-heart
+				include ../icons/_icon-star
+				include ../icons/_icon-song_playlist
+			.feed-item-footer-button 
+				+button(true, "Play Episode")
+			
