@@ -1,0 +1,53 @@
+@use "../../abstracts" as abst;
+
+.topic {
+   &-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-column-gap: 22px;
+      grid-row-gap: 12px;
+   }
+   &-item {
+      position: relative;
+      &-image {
+         flex: 0 0 155px;
+         height: 86px;
+         border-radius: 10px;
+         box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.1);
+         position: relative;
+         z-index: 1;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+         }
+         &-shadow {
+            background-color: abst.$black1;
+            opacity: 0.74;
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            z-index: 2;
+         }
+      }
+      &-content {
+         position: absolute;
+         z-index: 2;
+         bottom: 10px;
+         left: 10px;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+      }
+      &-heading {
+         font-weight: 500;
+         color: #ffffff;
+      }
+      &-podcastCount {
+         font-size: 13px;
+         line-height: 1.46;
+         color: #ffffff;
+      }
+   }
+}

@@ -101,3 +101,27 @@ mixin followItem()
 
 
 	
+mixin listenItem(url = "./images/img-listen1.png")
+	.listen-item 
+		.listen-item-image 
+			img(srcSet="https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60 2x", alt="img-listen")
+		.listen-item-content 
+			p.listen-item-title Perspective with Yahia Amin
+			h3.listen-item-heading Don't Always Win | LifeSpring
+			.listen-interact
+				.listen-interact-item
+					include ../icons/_icon-playlist
+					span.listen-interact-count 156
+				.listen-interact-item
+					include ../icons/_icon-heart
+					span.listen-interact-count 78
+
+mixin topicItem()
+	.topic-item 
+		.topic-item-image 
+			img(srcSet="./images/img-topic1.png 2x", alt="img-topic")
+			.topic-item-image-shadow
+		.topic-item-content 
+			h3.topic-item-heading 🎨Society & Culture
+			span.topic-item-podcastCount 761k podcast
+

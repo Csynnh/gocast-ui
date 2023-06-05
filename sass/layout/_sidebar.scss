@@ -1,67 +1,67 @@
 @use "../abstracts" as abst;
 .sidebar {
-  background-color: abst.$bg-color;
-  padding: 48px 30px;
-  border-right: 1px solid abst.$gray-natural2;
-  @media screen and (max-width: 1279.98px) {
-    display: none;
-  }
+   background-color: abst.$bg-color;
+   padding: 48px 30px;
+   border-right: 1px solid abst.$gray-natural2;
+   @media screen and (max-width: 1279.98px) {
+      display: none;
+   }
 }
 .logo {
-  display: block;
-  margin-bottom: 44px;
+   display: block;
+   margin-bottom: 44px;
 }
 .menu {
-  display: flex;
-  gap: 6px;
-  --gap: 26px;
-  flex-direction: column;
-  &:not(:last-child)::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: abst.$grayE9;
-    margin-block: var(--gap);
-  }
-  &-heading {
-    font-size: 13px;
-    line-height: 1.46;
-    color: abst.$text-gray;
-    margin-bottom: 10px;
-    padding-left: 20px;
-  }
-  &-icon {
-    flex: 0 0 24px;
-  }
-  &-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: abst.$text-black1;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.43;
-    border-radius: 12px;
-    width: 196px;
-    height: 40px;
-    padding: 8px 30px 8px 20px;
+   display: flex;
+   gap: 6px;
+   --gap: 26px;
+   flex-direction: column;
+   &:not(:last-child)::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: abst.$grayE9;
+      margin-block: var(--gap);
+   }
+   &-heading {
+      font-size: 13px;
+      line-height: 1.46;
+      color: abst.$text-gray;
+      margin-bottom: 10px;
+      padding-left: 20px;
+   }
+   &-icon {
+      flex: 0 0 24px;
+   }
+   &-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: abst.$text-black1;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.43;
+      border-radius: 12px;
+      width: 196px;
+      height: 40px;
+      padding: 8px 30px 8px 20px;
 
-    // Active
-    &:hover {
-      background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
-      color: white;
-      [fill^="#E5"] {
-        fill: #fff;
-        opacity: 1;
+      // Active
+      &:hover {
+         background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+         color: white;
+         [fill^="#E5"] {
+            fill: #fff;
+            opacity: 1;
+         }
+         [fill^="#A5"] {
+            mix-blend-mode: normal;
+            fill: hsl(
+               var(--primary-h),
+               calc(var(--primary-s) + 1%),
+               calc(var(--primary-l) + 16%)
+            );
+         }
       }
-      [fill^="#A5"] {
-        mix-blend-mode: normal;
-        fill: hsl(
-          var(--primary-h),
-          calc(var(--primary-s) + 1%),
-          calc(var(--primary-l) + 16%)
-        );
-      }
-    }
-  }
+   }
 }
