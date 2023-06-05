@@ -82,3 +82,22 @@ mixin feedItem
 			.feed-item-footer-button 
 				+button(true, "Play Episode")
 			
+
+mixin widgetHeader(heading = "Top 8 Podcast", url="#")
+	.widget-header
+		h3.widget-heading.heading= heading
+		a.widget-view-all(href=url) View all
+
+mixin followItem()
+	.follow-item 
+		.follow-item-user 
+			.follow-item-user-avatar
+				img(srcSet="./images/img-follow1.png 2x", alt="img-follow") 
+			.follow-item-user-info
+				h4.follow-item-user-name Yahia Amin
+				p.follow-item-user-usernam @yahiamdamin
+		.follow-item-button 
+			+button(false, "Follow")
+
+
+	

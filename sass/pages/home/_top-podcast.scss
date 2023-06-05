@@ -1,0 +1,12 @@
+.top-podcast {
+   &-images {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+   }
+   &-item {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      object-fit: cover;
+   }
+}

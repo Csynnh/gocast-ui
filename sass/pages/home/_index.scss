@@ -1,7 +1,12 @@
 @forward "./host";
 @forward "./trending";
 @forward "./feed";
+@forward "./top-podcast";
+@forward "./suggest-follow";
+@forward "./listening-history";
+
 .home-wrapper {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+   display: grid;
+   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+   column-gap: 62px;
 }

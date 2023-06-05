@@ -1,101 +1,101 @@
 @use "../../abstracts" as abst;
 .trending {
-  padding-top: 20px;
-  padding-bottom: 36px;
-
-  container-type: inline-size;
-  container-name: trending;
-  &-heading {
-    --mb: 11px;
-  }
-  &-banner {
-    background-color: abst.$gray-natural1;
-    border-radius: 10px;
-    padding: 20px 22px 22px 20px;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    @container trending (max-width: 630px) {
-      overflow: hidden;
-    }
-  }
-  &-content {
-    flex: 0 0 310px;
-    @container trending (max-width: 630px) {
-      flex: 1;
-    }
-  }
-  &-title {
-    font-size: 22px;
-    line-height: 1.45;
-    color: abst.$text-black1;
-    margin-bottom: 11px;
-    span {
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: linear-gradient(
-        92.29deg,
-        #415ef4 0.33%,
-        #7141ef 28.14%
-      );
-    }
-  }
-  &-padcast {
-    color: abst.$gray-natural;
-    margin-bottom: 4px;
-  }
-  &-author {
-    color: abst.$primary-black;
-    margin-bottom: 20px;
-    span {
+   padding-top: 20px;
+   padding-bottom: 36px;
+   //  margin-right: 62px;
+   container-type: inline-size;
+   container-name: trending;
+   &-heading {
+      --mb: 11px;
+   }
+   &-banner {
+      background-color: abst.$gray-natural1;
+      border-radius: 10px;
+      padding: 20px 22px 22px 20px;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      @container trending (max-width: 630px) {
+         overflow: hidden;
+      }
+   }
+   &-content {
+      flex: 0 0 310px;
+      @container trending (max-width: 630px) {
+         flex: 1;
+      }
+   }
+   &-title {
+      font-size: 22px;
+      line-height: 1.45;
+      color: abst.$text-black1;
+      margin-bottom: 11px;
+      span {
+         color: transparent;
+         background-clip: text;
+         -webkit-background-clip: text;
+         background-image: linear-gradient(
+            92.29deg,
+            #415ef4 0.33%,
+            #7141ef 28.14%
+         );
+      }
+   }
+   &-padcast {
       color: abst.$gray-natural;
-    }
-  }
+      margin-bottom: 4px;
+   }
+   &-author {
+      color: abst.$primary-black;
+      margin-bottom: 20px;
+      span {
+         color: abst.$gray-natural;
+      }
+   }
 
-  &-circle,
-  &-vector {
-    position: absolute;
-  }
-  &-vector {
-    top: 36px;
-    right: 74px;
-  }
-  &-circle {
-    left: 350px;
-    top: 121px;
-  }
-  &-image {
-    position: absolute;
-    bottom: 0;
-    right: 15px;
-    max-width: 332px;
-    @container trending (max-width: 630px) {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 767.98px) {
-    &-vector {
-      top: 69px;
-      right: 22px;
-    }
-    &-circle {
-      width: 109px;
-      height: 109px;
-      left: 203px;
-      top: 158px;
-    }
-    &-button {
-      --padding: 9px 14px;
-    }
-    &-author {
-      margin-bottom: 21px;
-    }
-    &-padcast {
-      margin-bottom: 6px;
-    }
-    &-title {
-      margin-bottom: 7px;
-    }
-  }
+   &-circle,
+   &-vector {
+      position: absolute;
+   }
+   &-vector {
+      top: 36px;
+      right: 74px;
+   }
+   &-circle {
+      left: 350px;
+      top: 121px;
+   }
+   &-image {
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+      max-width: 332px;
+      @container trending (max-width: 630px) {
+         display: none;
+      }
+   }
+   @media screen and (max-width: 767.98px) {
+      &-vector {
+         top: 69px;
+         right: 22px;
+      }
+      &-circle {
+         width: 109px;
+         height: 109px;
+         left: 203px;
+         top: 158px;
+      }
+      &-button {
+         --padding: 9px 14px;
+      }
+      &-author {
+         margin-bottom: 21px;
+      }
+      &-padcast {
+         margin-bottom: 6px;
+      }
+      &-title {
+         margin-bottom: 7px;
+      }
+   }
 }

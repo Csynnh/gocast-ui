@@ -1,0 +1,45 @@
+@use "../../abstracts" as abst;
+.follow {
+   &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      &-user {
+         display: flex;
+         align-items: center;
+         gap: 11px;
+         &-avatar {
+            flex: 0 0 46px;
+            aspect-ratio: 1;
+            border-radius: 6px;
+            box-shadow: 0 0 0 2px white, 0 0 0 3px pink;
+            padding: 1px;
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border-radius: inherit;
+            }
+         }
+         &-nane {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1.47;
+            color: abst.$black1;
+            margin-bottom: 4px;
+         }
+         &-usernane {
+            font-size: 13px;
+            line-height: 1.46;
+            color: abst.$text-gray2;
+         }
+      }
+      &-button {
+         .button {
+            --padding: 6px 18px;
+            color: abst.$gray-natural1;
+         }
+      }
+   }
+}
