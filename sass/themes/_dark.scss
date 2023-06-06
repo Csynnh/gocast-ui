@@ -1,0 +1,112 @@
+@use "../abstracts" as abst;
+
+:root {
+   ---bgc-body: white;
+   --color-heading: abst.$black1;
+   --color-menu: #8494ab;
+   --color-boder-menu: abst.$gray-natural2;
+   --color-boder-menu: #f0f3f6;
+   --bgc-search: abst.$gray-natural2;
+   --color-host-name: abst.$text-gray1;
+   --bgc-banner: abst.$gray-natural1;
+   --color-trending-title: abst.$text-black1;
+   --color-trending-podcast: abst.$gray-natural;
+   --color-trending-author-name: abst.$primary-black;
+}
+body {
+   background-color: var(---bgc-body);
+}
+.topbar {
+   background-color: var(---bgc-body);
+   .search {
+      background-color: var(--bgc-search);
+   }
+}
+.sidebar {
+   background-color: var(---bgc-body);
+   border-right: 1px solid var(--color-boder-menu);
+   .menu {
+      &-link {
+         color: var(--color-menu);
+      }
+      &:not(:last-child)::after {
+         background-color: var(--color-boder-menu);
+      }
+   }
+}
+.heading {
+   color: var(--color-heading);
+}
+.feed {
+   &-author-name {
+      color: var(--color-heading);
+   }
+   &-item {
+      border: 1px solid var(--color-boder-menu);
+      &-main {
+         border-bottom: 1px solid var(--color-boder-menu);
+         border-top: 1px solid var(--color-boder-menu);
+      }
+   }
+   &-content {
+      &-heading,
+      &-desc {
+         color: var(--color-trending-title);
+      }
+   }
+}
+.host {
+   &-name {
+      color: var(--color-host-name);
+   }
+}
+.trending {
+   &-banner {
+      background-color: var(--bgc-banner);
+   }
+   &-title {
+      color: var(--color-trending-title);
+   }
+   &-podcast {
+      color: var(--color-trending-podcast);
+   }
+   &-author {
+      color: var(--color-trending-author-name);
+      span {
+         color: var(--color-trending-podcast);
+      }
+   }
+}
+.listen {
+   &-item {
+      &-heading {
+         color: var(--color-trending-title);
+      }
+   }
+}
+.follow {
+   &-item {
+      &-user {
+         &-name {
+            color: var(--color-trending-title);
+         }
+         &-avatar {
+            box-shadow: 0 0 0 2px var(---bgc-body), 0 0 0 3px pink;
+         }
+      }
+   }
+}
+@media (prefers-color-scheme: dark) {
+   :root {
+      ---bgc-body: #242731;
+      --color-heading: white;
+      --color-menu: #ababad;
+      --bgc-search: #373a43;
+      --color-boder-menu: #373a43;
+      --color-host-name: #e4e4e4;
+      --bgc-banner: #050f16;
+      --color-trending-title: white;
+      --color-trending-podcast: #a6a7b2;
+      --color-trending-author-name: white;
+   }
+}

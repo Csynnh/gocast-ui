@@ -1,0 +1,23 @@
+@use "../abstracts" as abst;
+.navigation {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 14px 24px;
+   background-color: #fff;
+   width: 100%;
+   &-item {
+      padding: 10px;
+   }
+   &-upload {
+      background-color: abst.$primary-color;
+      border-radius: 100rem;
+   }
+   @media screen and (min-width: 1280px) {
+      display: none;
+   }
+}

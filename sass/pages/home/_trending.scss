@@ -9,7 +9,6 @@
       --mb: 11px;
    }
    &-banner {
-      background-color: abst.$gray-natural1;
       border-radius: 10px;
       padding: 20px 22px 22px 20px;
       position: relative;
@@ -28,7 +27,6 @@
    &-title {
       font-size: 22px;
       line-height: 1.45;
-      color: abst.$text-black1;
       margin-bottom: 11px;
       span {
          color: transparent;
@@ -41,12 +39,10 @@
          );
       }
    }
-   &-padcast {
-      color: abst.$gray-natural;
+   &-podcast {
       margin-bottom: 4px;
    }
    &-author {
-      color: abst.$primary-black;
       margin-bottom: 20px;
       span {
          color: abst.$gray-natural;
@@ -75,6 +71,9 @@
       }
    }
    @media screen and (max-width: 767.98px) {
+      padding-top: 6px;
+      padding-bottom: 4px;
+
       &-vector {
          top: 69px;
          right: 22px;

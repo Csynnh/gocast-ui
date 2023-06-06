@@ -13,7 +13,6 @@
             flex: 0 0 46px;
             aspect-ratio: 1;
             border-radius: 6px;
-            box-shadow: 0 0 0 2px white, 0 0 0 3px pink;
             padding: 1px;
             img {
                width: 100%;
@@ -22,14 +21,13 @@
                border-radius: inherit;
             }
          }
-         &-nane {
+         &-name {
             font-weight: 500;
             font-size: 15px;
             line-height: 1.47;
-            color: abst.$black1;
             margin-bottom: 4px;
          }
-         &-usernane {
+         &-username {
             font-size: 13px;
             line-height: 1.46;
             color: abst.$text-gray2;
