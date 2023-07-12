@@ -1,36 +1,36 @@
 mixin menuItem(text, icon = '', href = "#")
 	li.menu-item 
 		a.menu-link(href= href)
-				span.menu-icon
-					if icon
-						case icon
-							when 'icon-home'
-									include ../icons/_icon-home
-							when 'icon-dashboard'
-									include ../icons/_icon-dashboard
-							when 'icon-expl'
-									include ../icons/_icon-expl
-							when 'icon-leaderboard'
-									include ../icons/_icon-leaderboard
-							when 'icon-mic'
-									include ../icons/_icon-mic
-							when 'icon-playlist'
-									include ../icons/_icon-playlist
-							when 'icon-sub_er'
-									include ../icons/_icon-sub_er
-							when 'icon-sub'
-									include ../icons/_icon-sub
-							when 'icon-team'
-									include ../icons/_icon-team
-							when 'icon-trending'
-									include ../icons/_icon-trending    
-				span.menu-text= text 
+			span.menu-icon
+				if icon
+					case icon
+						when 'icon-home'
+								include ../icons/_icon-home
+						when 'icon-dashboard'
+								include ../icons/_icon-dashboard
+						when 'icon-expl'
+								include ../icons/_icon-expl
+						when 'icon-leaderboard'
+								include ../icons/_icon-leaderboard
+						when 'icon-mic'
+								include ../icons/_icon-mic
+						when 'icon-playlist'
+								include ../icons/_icon-playlist
+						when 'icon-sub_er'
+								include ../icons/_icon-sub_er
+						when 'icon-sub'
+								include ../icons/_icon-sub
+						when 'icon-team'
+								include ../icons/_icon-team
+						when 'icon-trending'
+								include ../icons/_icon-trending    
+			span.menu-text= text 
 
 mixin toggle
 	label.toggle     
-					input(type="checkbox").toggle-input
-					.toggle-main
-						.toggle-spinner
+		input(type="checkbox").toggle-input
+		.toggle-main
+			.toggle-spinner
 
 mixin button(icon= false, title= "Play Now") 
 	button.button.button--primary.feed-button
@@ -47,7 +47,6 @@ mixin feedItem
 					img.feed-author-image(srcSet="./images/img-feed-avatar.png 2x", alt="feed-avatar")
 					span.feed-author-icon_veryfi 
 						include ../icons/_icon-veryfi
-
 				.feed-author-content
 					.feed-author-title
 						h4.feed-author-name James Killened
